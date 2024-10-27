@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Enthusiasts Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Book Enthusiasts Platform</h1>
+    </header>
+    
+    <main>
+        <section id="user-info">
+            <h2>User Information</h2>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="text" id="year" placeholder="Your Year (e.g., 1st, 2nd)">
+            <input type="text" id="department" placeholder="Your Department">
+            <button onclick="submitUserInfo()">Submit</button>
+        </section>
+        
+        <section id="reading-lists">
+            <h2>Your Reading Lists</h2>
+            <div>
+                <h3>To Be Read</h3>
+                <ul id="to-read-list"></ul>
+                <input type="text" id="to-read-input" placeholder="Add a book...">
+                <button onclick="addBook('to-read')">Add</button>
+            </div>
+            
+            <div>
+                <h3>Currently Reading</h3>
+                <ul id="currently-reading-list"></ul>
+                <input type="text" id="currently-reading-input" placeholder="Add a book...">
+                <button onclick="addBook('currently-reading')">Add</button>
+            </div>
+            
+            <div>
+                <h3>Finished</h3>
+                <ul id="finished-list"></ul>
+                <input type="text" id="finished-input" placeholder="Add a book...">
+                <button onclick="addBook('finished')">Add</button>
+            </div>
+        </section>
+        
+        <section id="library">
+            <h2>Library</h2>
+            <ul id="library-items"></ul>
+        </section>
+        
+        <section id="reviews">
+            <h2>Share Your Reviews</h2>
+            <textarea id="review-text" placeholder="Write your review..."></textarea>
+            <button onclick="shareReview()">Share Review</button>
+            <ul id="review-list"></ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Book Enthusiasts Platform</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
